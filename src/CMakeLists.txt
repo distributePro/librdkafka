@@ -97,7 +97,7 @@ if(LINK_ATOMIC)
 endif()
 
 find_package(Threads REQUIRED)
-target_link_libraries(rdkafka PUBLIC Threads::Threads)
+target_link_libraries(rdkafka PUBLIC rt Threads::Threads)
 
 if(WITH_SASL)
   pkg_check_modules(SASL REQUIRED libsasl2)
